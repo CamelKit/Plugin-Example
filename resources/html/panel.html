@@ -1,0 +1,52 @@
+<div class="camelcore-plugin-panel">
+  <div class="panel-header">
+    <div class="header-icon-container">
+      <img id="panel-logo" alt="Plugin Logo" />
+    </div>
+    <div class="header-text">
+      <h2>Example Plugin</h2>
+      <p class="subtitle">CamelCore Client Showcase</p>
+    </div>
+  </div>
+
+  <div class="panel-card">
+    <div class="card-title">Live Game State</div>
+    <div class="stat-row">
+      <span class="stat-label">Player Position:</span>
+      <span id="player-coords" class="stat-value">Waiting for game...</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Minimap Updates:</span>
+      <span id="minimap-ticks" class="stat-value">0</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Entities Observed:</span>
+      <span id="entity-count" class="stat-value">0</span>
+    </div>
+  </div>
+
+  <div class="panel-card">
+    <div class="card-title">Persistent Data Demo</div>
+    <p class="card-description">This counter automatically persists in IndexedDB across client sessions via <code>this.data</code>.</p>
+    <div class="counter-container">
+      <span class="counter-display">Clicks: <strong id="counter-value">0</strong></span>
+      <button id="counter-btn" class="btn btn-primary">Increment Counter</button>
+    </div>
+  </div>
+
+  <div class="panel-card">
+    <div class="card-title">Bundled Assets Demo</div>
+    <p class="card-description">Static audio files are bundled as inlined assets and playable through the browser audio API.</p>
+    <button id="play-sound-btn" class="btn btn-secondary">🔊 Play Sample Audio</button>
+  </div>
+
+  <div class="panel-card">
+    <div class="card-title">Game Hooks Active</div>
+    <ul class="hooks-list">
+      <li><code>GameManager_updateMinimap</code></li>
+      <li><code>EntityManager_createNpc</code></li>
+      <li><code>EntityManager_createGroundItem</code></li>
+      <li><code>ChatManager_focusChatFromGlobalEnter</code></li>
+    </ul>
+  </div>
+</div>
