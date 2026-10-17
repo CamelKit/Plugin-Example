@@ -1,11 +1,11 @@
-import { Plugin, SettingsTypes, PanelManager } from '@evillite/core';
+import { Plugin, SettingsTypes, PanelManager } from '@camelkit/core';
 import panelHtml from '../resources/html/panel.html';
 import panelCss from '../resources/css/panel.css';
 import logoImage from '../resources/images/icon.png';
 import sampleAudio from '../resources/sounds/sample.mp3';
 
 /**
- * ExamplePlugin — Reference & Starter Plugin for CamelCore (EvilQuest)
+ * ExamplePlugin — Reference & Starter Plugin for CamelKit (EvilQuest)
  *
  * This template demonstrates:
  * 1. Plugin Lifecycle: init(), start(), stop()
@@ -20,7 +20,7 @@ import sampleAudio from '../resources/sounds/sample.mp3';
 export default class ExamplePlugin extends Plugin {
   // Required plugin metadata
   pluginName = 'ExamplePlugin';
-  author = 'CamelCore Contributor';
+  author = 'CamelKit Contributor';
 
   // Sidebar Panel Manager instance
   private panelManager = new PanelManager();
@@ -34,7 +34,7 @@ export default class ExamplePlugin extends Plugin {
   constructor() {
     super();
 
-    // Custom Plugin Settings that appear in CamelCore's Settings UI
+    // Custom Plugin Settings that appear in CamelKit's Settings UI
     this.settings.showNotifications = {
       text: 'Log Entity Spawns to Console',
       type: SettingsTypes.checkbox,
@@ -54,7 +54,7 @@ export default class ExamplePlugin extends Plugin {
     this.settings.customTag = {
       text: 'Custom Tag Label',
       type: SettingsTypes.text,
-      value: 'CamelCore',
+      value: 'CamelKit',
       callback: () => this.info('Custom Tag changed to:', this.settings.customTag.value),
     };
   }
@@ -68,7 +68,7 @@ export default class ExamplePlugin extends Plugin {
    * Use this to prepare initial data structures.
    */
   init(): void {
-    // this.data is persistent per-character in CamelCore's IndexedDB
+    // this.data is persistent per-character in CamelKit's IndexedDB
     if (typeof this.data.counter !== 'number') {
       this.data.counter = 0;
     }
@@ -182,7 +182,7 @@ export default class ExamplePlugin extends Plugin {
   // Game Hooks
   // ---------------------------------------------------------------------------
   // Any method formatted as `${ClassName}_${methodName}` is automatically
-  // invoked by CamelCore's HookManager whenever that game function executes!
+  // invoked by CamelKit's HookManager whenever that game function executes!
   //
   // Verified Class Signatures available to hook:
   // - GameManager (updateMinimap, showPlayerChatBubble, worldObjectDisplayName, ...)

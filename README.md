@@ -1,8 +1,8 @@
-# CamelCore Plugin Template
+# CamelKit Plugin Template
 
-Welcome to the official starter template for creating plugins for the **CamelCore** client (for [EvilQuest](https://evilquest.net)).
+Welcome to the official starter template for creating plugins for the **CamelKit** client (for [EvilQuest](https://evilquest.net)).
 
-This repository serves as a starter template and interactive reference showcasing how to hook into live game state, display custom UI in the sidebar, manage reactive settings, persist data per-character, and package assets for submission to the **CamelCore Plugin Hub**.
+This repository serves as a starter template and interactive reference showcasing how to hook into live game state, display custom UI in the sidebar, manage reactive settings, persist data per-character, and package assets for submission to the **CamelKit Plugin Hub**.
 
 ---
 
@@ -15,8 +15,8 @@ This repository serves as a starter template and interactive reference showcasin
 ### 1. Create a Repository from this Template
 Click **"Use this template"** on GitHub or clone your fork locally:
 ```bash
-git clone https://github.com/YOUR_USERNAME/camelcore-my-plugin.git
-cd camelcore-my-plugin
+git clone https://github.com/YOUR_USERNAME/camelkit-my-plugin.git
+cd camelkit-my-plugin
 ```
 
 ### 2. Install Dependencies
@@ -49,7 +49,7 @@ yarn typecheck
 ├── .editorconfig
 ├── .gitignore
 ├── .yarnrc.yml                   # Yarn Modern node-modules linker
-├── evillite-core.tgz             # Bundled @evillite/core definitions & interfaces
+├── camelkit-core.tgz             # Bundled @camelkit/core definitions & interfaces
 ├── package.json                  # Manifest & build scripts
 ├── yarn.lock                     # Strict Yarn 4 lockfile (required for CI builder)
 ├── tsconfig.json                 # TypeScript compiler configuration
@@ -73,10 +73,10 @@ yarn typecheck
 ## 🧩 Plugin Anatomy & API Reference
 
 ### 1. Base Class & Metadata
-Every plugin extends the `Plugin` class from `@evillite/core`:
+Every plugin extends the `Plugin` class from `@camelkit/core`:
 
 ```typescript
-import { Plugin } from '@evillite/core';
+import { Plugin } from '@camelkit/core';
 
 export default class MyPlugin extends Plugin {
   pluginName = 'My Awesome Plugin';
@@ -101,7 +101,7 @@ export default class MyPlugin extends Plugin {
 ---
 
 ### 2. Game Hooks
-CamelCore features a dynamic reflection system. Any method on your plugin class following the pattern:
+CamelKit features a dynamic reflection system. Any method on your plugin class following the pattern:
 ```typescript
 ${ClassName}_${methodName}(...args: any[])
 ```
@@ -141,10 +141,10 @@ Plugins can access live game state and lookup tables directly through:
 ---
 
 ### 4. Custom Sidebar Panels
-Plugins can add icons to the CamelCore right sidebar and render custom panels:
+Plugins can add icons to the CamelKit right sidebar and render custom panels:
 
 ```typescript
-import { PanelManager } from '@evillite/core';
+import { PanelManager } from '@camelkit/core';
 import panelHtml from '../resources/html/panel.html';
 import panelCss from '../resources/css/panel.css';
 
@@ -172,7 +172,7 @@ export default class MyPlugin extends Plugin {
 ---
 
 ### 5. Persistent Storage (`this.data`)
-CamelCore provides per-character reactive storage via `this.data`. Anything stored on `this.data` is automatically persisted into IndexedDB:
+CamelKit provides per-character reactive storage via `this.data`. Anything stored on `this.data` is automatically persisted into IndexedDB:
 
 ```typescript
 init(): void {
@@ -187,10 +187,10 @@ increment(): void {
 ---
 
 ### 6. User Settings
-Add configurable settings that render natively in CamelCore's Settings tab:
+Add configurable settings that render natively in CamelKit's Settings tab:
 
 ```typescript
-import { SettingsTypes } from '@evillite/core';
+import { SettingsTypes } from '@camelkit/core';
 
 constructor() {
   super();
@@ -222,14 +222,14 @@ constructor() {
 
 ---
 
-## 🧪 Testing Locally in CamelCore Client
+## 🧪 Testing Locally in CamelKit Client
 
 1. **Build your plugin**:
    ```bash
    yarn build
    ```
-2. **Copy the compiled output or source to CamelCore Client**:
-   Copy `dist/plugin.js` (or your TypeScript source file) into your CamelCore Client repository:
+2. **Copy the compiled output or source to CamelKit Client**:
+   Copy `dist/plugin.js` (or your TypeScript source file) into your CamelKit Client repository:
    ```bash
    cp dist/plugin.js /path/to/Client/packages/client/src/renderer/client/plugins/MyPlugin.js
    ```
@@ -244,18 +244,18 @@ constructor() {
 
 ---
 
-## 🌐 Submitting to CamelCore Plugin Hub
+## 🌐 Submitting to CamelKit Plugin Hub
 
 Once your plugin is ready:
 
 1. **Push to a public GitHub repository**:
    Ensure your repository has a committed `yarn.lock` and valid `package.json`.
-2. **Log into CamelCore Hub**:
-   Navigate to the [CamelCore Hub](https://camelcore.net) and log in with your GitHub account.
+2. **Log into CamelKit Hub**:
+   Navigate to the [CamelKit Hub](https://camelcore.net) and log in with your GitHub account.
 3. **Submit Your Plugin**:
    Go to the **Developer Dashboard**, enter your repository URL (e.g. `https://github.com/your-username/my-plugin`), and submit.
 4. **Automated Air-Gapped Build**:
-   When an admin approves your submission, the CamelCore **Plugin-Builder** CI:
+   When an admin approves your submission, the CamelKit **Plugin-Builder** CI:
    - Downloads a verified zip of your repo
    - Runs `yarn install --immutable` and `yarn build` in an isolated Node 22 runner
    - Deploys the compiled `dist/plugin.js` to the global edge CDN
@@ -264,4 +264,4 @@ Once your plugin is ready:
 ---
 
 ## 📜 License
-GPL-3.0-only. All plugins contributed to the CamelCore ecosystem must respect open auditability and EvilQuest community safety guidelines.
+GPL-3.0-only. All plugins contributed to the CamelKit ecosystem must respect open auditability and EvilQuest community safety guidelines.

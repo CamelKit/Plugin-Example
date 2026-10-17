@@ -5,6 +5,18 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@camelkit/core@file:./camelkit-core.tgz::locator=camelkit-example-plugin%40workspace%3A.":
+  version: 0.1.2
+  resolution: "@camelkit/core@file:./camelkit-core.tgz#./camelkit-core.tgz::hash=8a5b18&locator=camelkit-example-plugin%40workspace%3A."
+  dependencies:
+    acorn: "npm:^8.15.0"
+    acorn-walk: "npm:^8.3.4"
+    idb: "npm:^8.0.3"
+    on-change: "npm:^5.0.1"
+  checksum: 10c0/bc5785ddef1f5606010f840eb43e243fd5736895a6e50b68bbb8e57bb2415890f3d715246fe97ea8c44c4e9894a05aeeca8eae77a39da0e28277b5b6488edf5f
+  languageName: node
+  linkType: hard
+
 "@esbuild/aix-ppc64@npm:0.25.12":
   version: 0.25.12
   resolution: "@esbuild/aix-ppc64@npm:0.25.12"
@@ -187,18 +199,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@evillite/core@file:./evillite-core.tgz::locator=camelcore-example-plugin%40workspace%3A.":
-  version: 0.1.2
-  resolution: "@evillite/core@file:./evillite-core.tgz#./evillite-core.tgz::hash=76e88c&locator=camelcore-example-plugin%40workspace%3A."
-  dependencies:
-    acorn: "npm:^8.15.0"
-    acorn-walk: "npm:^8.3.4"
-    idb: "npm:^8.0.3"
-    on-change: "npm:^5.0.1"
-  checksum: 10c0/a90ed94694e9d453502a35be485545e8c52f364938196d92cfb857f0886f1d34c2eba7759ae14e1729cbbdba3c32c4385280cfab330f7f914f68949e1c468dcd
-  languageName: node
-  linkType: hard
-
 "acorn-walk@npm:^8.3.4":
   version: 8.3.5
   resolution: "acorn-walk@npm:8.3.5"
@@ -217,11 +217,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camelcore-example-plugin@workspace:.":
+"camelkit-example-plugin@workspace:.":
   version: 0.0.0-use.local
-  resolution: "camelcore-example-plugin@workspace:."
+  resolution: "camelkit-example-plugin@workspace:."
   dependencies:
-    "@evillite/core": "file:./evillite-core.tgz"
+    "@camelkit/core": "file:./camelkit-core.tgz"
     esbuild: "npm:^0.25.0"
     typescript: "npm:^5.4.0"
   languageName: unknown

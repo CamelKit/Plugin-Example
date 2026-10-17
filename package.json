@@ -1,10 +1,10 @@
 {
-  "name": "camelcore-example-plugin",
+  "name": "camelkit-example-plugin",
   "version": "1.0.0",
-  "description": "Example & Starter Template for CamelCore Plugins",
+  "description": "Example & Starter Template for CamelKit Plugins",
   "type": "module",
   "license": "GPL-3.0-only",
-  "author": "CamelCore Contributor",
+  "author": "CamelKit Contributor",
   "main": "src/ExamplePlugin.ts",
   "scripts": {
     "build": "node build.mjs",
@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@evillite/core": "file:./evillite-core.tgz",
+    "@camelkit/core": "file:./camelkit-core.tgz",
     "esbuild": "^0.25.0",
     "typescript": "^5.4.0"
   },

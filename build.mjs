@@ -27,8 +27,10 @@ const buildOptions = {
   platform: 'browser',
   target: 'es2020',
   sourcemap: true,
-  // The CamelCore client provides these at runtime via import maps; never bundle them.
+  // The CamelKit client provides these at runtime via import maps; never bundle them.
   external: [
+    '@camelkit/core',
+    '@camelkit/core/*',
     '@evillite/core',
     '@evillite/core/*',
     '@highlite/core',
@@ -54,8 +56,8 @@ const buildOptions = {
 if (isWatch) {
   const ctx = await esbuild.context(buildOptions);
   await ctx.watch();
-  console.log('[CamelCore Plugin-Builder] Watching for source changes...');
+  console.log('[CamelKit Plugin-Builder] Watching for source changes...');
 } else {
   await esbuild.build(buildOptions);
-  console.log('[CamelCore Plugin-Builder] Successfully bundled to dist/plugin.js');
+  console.log('[CamelKit Plugin-Builder] Successfully bundled to dist/plugin.js');
 }
