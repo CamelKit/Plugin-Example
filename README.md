@@ -49,8 +49,7 @@ yarn typecheck
 ├── .editorconfig
 ├── .gitignore
 ├── .yarnrc.yml                   # Yarn Modern node-modules linker
-├── camelkit-core.tgz             # Bundled @camelkit/core definitions & interfaces
-├── package.json                  # Manifest & build scripts
+├── package.json                  # Manifest & dependencies (resolves @camelkit/core via NPM)
 ├── yarn.lock                     # Strict Yarn 4 lockfile (required for CI builder)
 ├── tsconfig.json                 # TypeScript compiler configuration
 ├── build.mjs                     # esbuild bundle configuration producing dist/plugin.js
