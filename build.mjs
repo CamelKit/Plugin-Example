@@ -31,11 +31,6 @@ const buildOptions = {
   external: [
     '@camelkit/core',
     '@camelkit/core/*',
-    '@evillite/core',
-    '@evillite/core/*',
-    '@highlite/core',
-    '@highlite/plugin-api',
-    '@ryelite/core',
     '@babylonjs/*',
     '@babylonjs/core',
   ],
