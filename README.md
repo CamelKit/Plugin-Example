@@ -258,7 +258,7 @@ Once your plugin is ready:
    - Downloads a verified zip of your repo
    - Runs `yarn install --immutable` and `yarn build` in an isolated Node 22 runner
    - Deploys the compiled `dist/plugin.js` to the global edge CDN
-   - Mirrors your source code to the [Plugin-Vault](https://github.com/CamelC0re/Plugin-Vault) for GPL-3.0 open audit compliance
+   - Mirrors your source code to the [Plugin-Vault](https://github.com/CamelKit/Plugin-Vault) for GPL-3.0 open audit compliance
 
 ---
 
