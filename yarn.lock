@@ -5,15 +5,15 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@camelkit/core@file:./camelkit-core.tgz::locator=camelkit-example-plugin%40workspace%3A.":
-  version: 0.1.2
-  resolution: "@camelkit/core@file:./camelkit-core.tgz#./camelkit-core.tgz::hash=8a5b18&locator=camelkit-example-plugin%40workspace%3A."
+"@camelkit/core@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@camelkit/core@npm:0.1.0"
   dependencies:
     acorn: "npm:^8.15.0"
     acorn-walk: "npm:^8.3.4"
     idb: "npm:^8.0.3"
     on-change: "npm:^5.0.1"
-  checksum: 10c0/bc5785ddef1f5606010f840eb43e243fd5736895a6e50b68bbb8e57bb2415890f3d715246fe97ea8c44c4e9894a05aeeca8eae77a39da0e28277b5b6488edf5f
+  checksum: 10c0/57f3dc8ddfa52b8701a86b44a86aece9d2475e72c9415a49807b5e63f402f0323fe5ed2343f1923f5765cdb89369e8d27e2f9ca68e446e5037cbda4284e6fe14
   languageName: node
   linkType: hard
 
@@ -221,7 +221,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "camelkit-example-plugin@workspace:."
   dependencies:
-    "@camelkit/core": "file:./camelkit-core.tgz"
+    "@camelkit/core": "npm:^0.1.0"
     esbuild: "npm:^0.25.0"
     typescript: "npm:^5.4.0"
   languageName: unknown

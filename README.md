@@ -250,7 +250,7 @@ Once your plugin is ready:
 1. **Push to a public GitHub repository**:
    Ensure your repository has a committed `yarn.lock` and valid `package.json`.
 2. **Log into CamelKit Hub**:
-   Navigate to the [CamelKit Hub](https://camelcore.net) and log in with your GitHub account.
+   Navigate to the [CamelKit Hub](https://camelkit.dev) and log in with your GitHub account.
 3. **Submit Your Plugin**:
    Go to the **Developer Dashboard**, enter your repository URL (e.g. `https://github.com/your-username/my-plugin`), and submit.
 4. **Automated Air-Gapped Build**:
