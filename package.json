@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@camelkit/core": "^0.1.0",
+    "@camelkit/core": "^0.1.1",
     "esbuild": "^0.25.0",
     "typescript": "^5.4.0"
   },
